@@ -1,0 +1,45 @@
+name:                misc-benchmarks
+version:             0.1.0
+-- synopsis:            
+-- description:         
+homepage:            https://github.com/philopon/misc-benchmarks
+license:             PublicDomain
+license-file:        LICENSE
+author:              Hirotomo Moriwaki
+maintainer:          philopon.dependence@gmail.com
+-- copyright:           
+-- category:            
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+executable random
+  main-is:             random.hs
+  build-depends:       base                   >=4.6  && <4.9
+                     , criterion              >=1.1  && <1.2
+                     , primitive              >=0.6  && <0.7
+                     , random                 >=1.1  && <1.2
+                     , mwc-random             >=0.13 && <0.14
+                     , mersenne-random        >=1.0  && <1.1
+                     , mersenne-random-pure64 >=0.2  && <0.3
+                     , sfmt                   >=0.1  && <0.2
+                     , tf-random              >=0.5  && <0.6
+                     , xorshift               >=2.0  && <2.1
+                     , Xorshift128Plus        >=0.1  && <0.2
+  ghc-options:         -O2 -Wall
+  default-language:    Haskell2010
+
+executable alloca
+  main-is:             alloca.hs
+  build-depends:       base                   >=4.6  && <4.9
+                     , criterion              >=1.1  && <1.2
+  ghc-options:         -O2 -Wall
+  default-language:    Haskell2010
+
+executable variable
+  main-is:             variable.hs
+  build-depends:       base                   >=4.6  && <4.9
+                     , criterion              >=1.1  && <1.2
+                     , mtl                    >=2.2  && <2.3
+  ghc-options:         -O2 -Wall
+  default-language:    Haskell2010

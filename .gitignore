@@ -5,3 +5,4 @@ cabal.sandbox.config
 alloca
 variable
 byteStringToInt
+dist
